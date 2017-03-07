@@ -274,4 +274,27 @@ namespace Abstraction.Core
     {
         string Url { get; set; }
     }
+    public interface ITable
+    {
+         string Schema { get; set; }
+         string Table { get; set; }
+         string ColumnType { get; set; }
+         string ColumnName { get; set; }
+    }
+    public interface IRepository
+    {
+        /// <summary>
+        /// Gets all <see cref="T"/> object from source
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<Entity> GetAll<Entity>() where Entity : class;
+        /// <summary>
+        /// Gets by condition
+        /// </summary>
+        /// <typeparam name="Entity"></typeparam>
+        /// <param name="entityPredicate"></param>
+        /// <returns></returns>
+        IEnumerable<Entity> GetBy<Entity>(Expression<Func<Entity, bool>> condition) where Entity : class;
+
+    }
 }
