@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Core.Service.Data.Host.Console")]
+[assembly: AssemblyTitle("Host.Data.Dynnamic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Core.Service.Data.Host.Console")]
+[assembly: AssemblyProduct("Host.Data.Dynnamic")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9f66c3f2-ff7a-47b6-802a-23349f9c2c2e")]
+[assembly: Guid("be00c3f8-ef3c-430f-97b8-64f641916d1f")]
 
 // Version information for an assembly consists of the following four values:
 //
