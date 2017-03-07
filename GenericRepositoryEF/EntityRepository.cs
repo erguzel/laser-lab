@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenericRepositoryEF
+namespace Repository.Generic
 {
     public class EntityRepository : IRepository, IDisposable
     {
