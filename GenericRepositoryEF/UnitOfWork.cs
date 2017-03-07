@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using Abstraction.Core;
 
-namespace GenericRepositoryEF
+namespace Repository.Generic
 {
     public class UnitOfWork<T> where T : DbContext
     {
