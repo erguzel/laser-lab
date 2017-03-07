@@ -1,0 +1,11 @@
+// Created by iWeb 3.0.4 local-build-20160830
+
+setTransparentGifURL('Media/transparent.gif');function applyEffects()
+{var registry=IWCreateEffectRegistry();registry.registerEffects({reflection_0:new IWReflection({opacity:0.50,offset:2.00}),stroke_3:new IWEmptyStroke(),shadow_6:new IWShadow({blurRadius:10,offset:new IWPoint(4.2426,4.2426),color:'#434343',opacity:0.750000}),shadow_2:new IWShadow({blurRadius:10,offset:new IWPoint(4.2426,4.2426),color:'#000000',opacity:0.750000}),stroke_1:new IWEmptyStroke(),stroke_4:new IWEmptyStroke(),shadow_5:new IWShadow({blurRadius:10,offset:new IWPoint(4.2426,4.2426),color:'#434343',opacity:0.750000}),shadow_4:new IWShadow({blurRadius:10,offset:new IWPoint(4.2426,4.2426),color:'#000000',opacity:0.750000}),shadow_1:new IWShadow({blurRadius:10,offset:new IWPoint(4.2426,4.2426),color:'#000000',opacity:0.750000}),shadow_0:new IWShadow({blurRadius:10,offset:new IWPoint(4.2426,4.2426),color:'#000000',opacity:0.750000}),stroke_0:new IWEmptyStroke(),stroke_2:new IWEmptyStroke(),shadow_3:new IWShadow({blurRadius:10,offset:new IWPoint(4.2426,4.2426),color:'#000000',opacity:0.750000})});registry.applyEffects();}
+function hostedOnDM()
+{return false;}
+function onPageLoad()
+{loadMozillaCSS('People_files/PeopleMoz.css')
+adjustLineHeightIfTooBig('id1');adjustFontSizeIfTooBig('id1');adjustLineHeightIfTooBig('id2');adjustFontSizeIfTooBig('id2');adjustLineHeightIfTooBig('id3');adjustFontSizeIfTooBig('id3');adjustLineHeightIfTooBig('id4');adjustFontSizeIfTooBig('id4');fixupAllIEPNGBGs();Widget.onload();fixAllIEPNGs('Media/transparent.gif');IMpreload('People_files','shapeimage_7','0');IMpreload('People_files','shapeimage_7','1');IMpreload('People_files','shapeimage_7','2');IMpreload('People_files','shapeimage_7','3');IMpreload('People_files','shapeimage_7','4');IMpreload('People_files','shapeimage_7','5');IMpreload('People_files','shapeimage_7','6');IMpreload('People_files','shapeimage_7','7');IMpreload('People_files','shapeimage_8','0');IMpreload('People_files','shapeimage_8','1');IMpreload('People_files','shapeimage_8','2');IMpreload('People_files','shapeimage_8','3');IMpreload('People_files','shapeimage_8','4');IMpreload('People_files','shapeimage_8','5');IMpreload('People_files','shapeimage_8','6');IMpreload('People_files','shapeimage_8','7');applyEffects()}
+function onPageUnload()
+{Widget.onunload();}
