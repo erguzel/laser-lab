@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Text;
 
 namespace Abstraction.Core
 {
@@ -281,20 +282,16 @@ namespace Abstraction.Core
          string ColumnType { get; set; }
          string ColumnName { get; set; }
     }
-    public interface IRepository
+    public interface IService<entity> where entity:class
     {
-        /// <summary>
-        /// Gets all <see cref="T"/> object from source
-        /// </summary>
-        /// <returns></returns>
-        IEnumerable<Entity> GetAll<Entity>() where Entity : class;
-        /// <summary>
-        /// Gets by condition
-        /// </summary>
-        /// <typeparam name="Entity"></typeparam>
-        /// <param name="entityPredicate"></param>
-        /// <returns></returns>
-        IEnumerable<Entity> GetBy<Entity>(Expression<Func<Entity, bool>> condition) where Entity : class;
-
+        IEnumerable<entity> GetAll();
+        IEnumerable<entity> GetBy(Expression<Func<entity, bool>> entityPredicate);
+        entity Find(Expression<Func<entity, bool>> entityPredicate);
+        bool Insert(entity entity);
+        bool Delete(entity entity);
+        bool InsertRange(IEnumerable<entity> entityRange);
+        bool DeleteRange(IEnumerable<entity> entityRange);
+        bool InjectTSQL(StringBuilder command, object[] parameters);
+        bool InjectTSQL(string command);
     }
 }
