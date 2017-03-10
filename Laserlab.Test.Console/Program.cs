@@ -13,20 +13,15 @@ namespace Laserlab.Test.Console
     {
         static void Main(string[] args)
         {
-            PersonTypes ps1 = new PersonTypes() { Id = 1, Name = "GroupMember" };
-            PersonTypes ps2 = new PersonTypes() { Id = 2, Name = "Collaborator" };
-            PersonTypes ps3 = new PersonTypes() { Id = 3, Name = "Student" };
-
-            List<PersonTypes> persons = new List<PersonTypes>();
-            persons.Add(ps1);
-            persons.Add(ps2);
-            persons.Add(ps3);
-            using (Laserlab.Service.LaserlabService<PersonTypes> sev = new Service.LaserlabService<PersonTypes>())
-            {
-               bool isOk =  sev.InsertRange(persons);
-                
-            }
-            
+            UserType t1 = new UserType() { Id = 1, Description = "Admin" };
+            UserType t2 = new UserType() { Id = 1, Description = "Member" };
+            UserType t3 = new UserType() { Id = 1, Description = "Guest" };
+            List<UserType> userTypes = new List<UserType>();
+            userTypes.Add(t1);
+            userTypes.Add(t2);
+            userTypes.Add(t3);
+            Laserlab.Service.LaserlabService<UserType> userService = new Service.LaserlabService<UserType>();
+            userService.InsertRange((IEnumerable<UserType>)userTypes);
         }
     }
 }

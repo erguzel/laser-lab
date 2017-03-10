@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Abstraction.Laserlab;
 using Laserlab.Data.Model;
+using System.Data.Entity.ModelConfiguration;
+
 
 namespace Laserlab.Data.Access
 {
@@ -20,11 +22,13 @@ namespace Laserlab.Data.Access
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+          
+            //modelBuilder.Configurations.Add(new UserTypeConfig());
+            //base.OnModelCreating(modelBuilder);
         }
-        public DbSet<Person> Persons { get; set; }
-        public DbSet<Document> Documents { get; set; }
-        public DbSet<PersonTypes> PersonTypes { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UserType> UserTypes { get; set; }
+        public DbSet<Project> Project { get; set; }
     }
 }
 

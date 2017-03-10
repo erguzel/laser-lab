@@ -5,32 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Laserlab.Data.Model;
+using Abstraction.Core;
+using System.Data.Entity.Infrastructure.Annotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Laserlab.Data.Access
 {
-    class UserConfiguration : EntityTypeConfiguration<Person>
-    {
-        public UserConfiguration()
-        {
-            //todo
-            this.HasKey(a => a.Id);
-        }
-    }
-    class DocumentConfiguration: EntityTypeConfiguration<Document>
-    {
-        public DocumentConfiguration()
-        {
-            //todo
-            this.HasKey(a => a.Id);
 
-        }
+    public class UserConfig : EntityTypeConfiguration<User>
+    {
 
     }
-    class PeronTypeConfiguration : EntityTypeConfiguration<PersonTypes>
+    public class UserTypeConfig : EntityTypeConfiguration<UserType>
     {
-        public PeronTypeConfiguration()
+        public UserTypeConfig()
         {
+            this.Property(p => p.Description).HasColumnType("NVARCHAR(20").HasColumnAnnotation(IndexAnnotation.AnnotationName, new IndexAnnotation(new IndexAttribute("UQ_UserTypeDescription", 2)));
         }
     }
-    //todo
+    
 }

@@ -5,18 +5,9 @@ using System.Collections.Generic;
 
 namespace Abstraction.Laserlab
 {
-    public interface IPicturable 
+ public interface IMaximumTemperature
     {
-        IEnumerable<IPicture> Pictures { get; set; }
-    }
-    public interface IDocumentable
-    {
-        IEnumerable<IDocument> Documents { get; set; }
-    }
-
-    public interface ILuminescence
-    {
-
+        string MaximumTemperature { get; set; }
     }
 
 }

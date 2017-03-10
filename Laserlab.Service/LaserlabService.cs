@@ -38,9 +38,10 @@ namespace Laserlab.Service
                 _ctx.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 // todo: log errors via Nlog 
+                Console.WriteLine(e.Message);
                 return false;
             }          
         }

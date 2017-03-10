@@ -45,7 +45,7 @@ namespace Abstraction.Core
     /// </summary>
     public interface IbePhonable
     {
-        IEnumerable<int> PhoneNumbers { get; set; }
+       Int64 PhoneNo { get; set; }
     }
     /// <summary>
     /// Any object that has status property
@@ -54,20 +54,6 @@ namespace Abstraction.Core
     {
         string status { get; set; }
     }
-	public interface IGettableAll
-	{
-		IEnumerable<Entity> GetAll<Entity>() where Entity : class;
-	}
-	public interface IGettableWhere
-	{
-		 /// <summary>
-        /// Gets by condition
-        /// </summary>
-        /// <typeparam name="Entity"></typeparam>
-        /// <param name="entityPredicate"></param>
-        /// <returns></returns>
-        IEnumerable<Entity> GetBy<Entity>(Expression<Func<Entity, bool>> condition) where Entity : class;
-	}
 	 public interface IChangable : IChronological
     {
         string PreviousState { get; set; }
@@ -252,10 +238,6 @@ namespace Abstraction.Core
     {
         double Mu { get; set; }
     }
-    public interface IFileExtension
-    {
-        string Extension { get; set; }
-    }
     public interface IPathable
     {
         string Path { get; set; }
@@ -294,4 +276,14 @@ namespace Abstraction.Core
         bool InjectTSQL(StringBuilder command, object[] parameters);
         bool InjectTSQL(string command);
     }
+    public interface IDuable
+    {
+        DateTime StartDate { get; set; }
+        DateTime EndDate { get; set; }
+    }
+    public interface IAdressable
+    {
+        string Adress { get; set; }
+    }
+    public interface Iconfig { }
 }
