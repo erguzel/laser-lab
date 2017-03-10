@@ -7,7 +7,7 @@ using System.Text;
 /// </summary>
 namespace Abstraction.Laserlab
 {
-    public interface IUserTypes: Ibeidentifiable, IbeDescriptable //admin, member, guest
+    public interface IUserTypes: Ibeidentifiable, IBeNamable //admin, member, guest
     {
        ICollection<IUser> Users { get; set; }
     }
