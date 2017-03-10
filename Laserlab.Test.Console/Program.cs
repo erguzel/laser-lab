@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using Abstraction.Laserlab;
-using Laserlab.Data.Model;
+using Laserlab.Model;
 
 namespace Laserlab.Test.Console
 {
@@ -13,6 +13,7 @@ namespace Laserlab.Test.Console
     {
         static void Main(string[] args)
         {
+
             UserType t1 = new UserType() { Id = 1, Description = "Admin" };
             UserType t2 = new UserType() { Id = 1, Description = "Member" };
             UserType t3 = new UserType() { Id = 1, Description = "Guest" };

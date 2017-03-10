@@ -63,17 +63,17 @@
       <Project>{e5894b2a-32b4-467a-8dfc-f717ff1a896a}</Project>
       <Name>Abstraction.Laserlab</Name>
     </ProjectReference>
-    <ProjectReference Include="$(SolutionDir)\Laserlab.Data.Access\Laserlab.Data.Access.csproj">
-      <Project>{c25e8124-e81b-49bd-9690-dbef42d85764}</Project>
-      <Name>Laserlab.Data.Access</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(SolutionDir)\Laserlab.Data.Model\Laserlab.Data.Model.csproj">
+    <ProjectReference Include="C:\backup\repository\github.erguzel\laser-lab\\Laserlab.Data.Model\Laserlab.Data.Model.csproj">
       <Project>{8cdd9f5a-65b8-4b1c-b300-ebc55e2fe238}</Project>
       <Name>Laserlab.Data.Model</Name>
     </ProjectReference>
     <ProjectReference Include="$(SolutionDir)\Laserlab.DTO\Laserlab.DTO.csproj">
       <Project>{231d4550-0762-4994-bcdc-3cc0a86d1186}</Project>
       <Name>Laserlab.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Laserlab.Data.Access\Laserlab.Data.Access.csproj">
+      <Project>{C25E8124-E81B-49BD-9690-DBEF42D85764}</Project>
+      <Name>Laserlab.Data.Access</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

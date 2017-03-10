@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C25E8124-E81B-49BD-9690-DBEF42D85764}</ProjectGuid>
+    <ProjectGuid>{B6CB1C92-557E-4230-8D9A-933C3227B4A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Laserlab.Data.Access</RootNamespace>
-    <AssemblyName>Laserlab.Data.Access</AssemblyName>
+    <RootNamespace>Laserlab.Model</RootNamespace>
+    <AssemblyName>Laserlab.Model</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,17 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,29 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityConfiguration.cs" />
-    <Compile Include="LaserlabContext.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)\Abstraction.Core\Abstraction.Core.csproj">
-      <Project>{2f6978ea-bd03-4e81-bf16-e2df69662de7}</Project>
-      <Name>Abstraction.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="$(SolutionDir)\Abstraction.Laserlab\Abstraction.Laserlab.csproj">
-      <Project>{e5894b2a-32b4-467a-8dfc-f717ff1a896a}</Project>
-      <Name>Abstraction.Laserlab</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Laserlab.Model\Laserlab.Model.csproj">
-      <Project>{b6cb1c92-557e-4230-8d9a-933c3227b4a6}</Project>
-      <Name>Laserlab.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

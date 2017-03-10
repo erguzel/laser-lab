@@ -44,13 +44,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="$(SolutionDir)\Laserlab.Data.Model\Laserlab.Data.Model.csproj">
-      <Project>{8cdd9f5a-65b8-4b1c-b300-ebc55e2fe238}</Project>
-      <Name>Laserlab.Data.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="$(SolutionDir)\Laserlab.DTO\Laserlab.DTO.csproj">
       <Project>{231d4550-0762-4994-bcdc-3cc0a86d1186}</Project>
       <Name>Laserlab.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Laserlab.Model\Laserlab.Model.csproj">
+      <Project>{b6cb1c92-557e-4230-8d9a-933c3227b4a6}</Project>
+      <Name>Laserlab.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

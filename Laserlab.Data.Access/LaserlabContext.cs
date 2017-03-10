@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Abstraction.Laserlab;
-using Laserlab.Data.Model;
+using Laserlab.Model;
 using System.Data.Entity.ModelConfiguration;
 
 

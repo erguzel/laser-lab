@@ -1,5 +1,4 @@
-﻿using Laserlab.Data.Model;
-using Laserlab.DTO;
+﻿using Laserlab.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

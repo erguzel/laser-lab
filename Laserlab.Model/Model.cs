@@ -1,12 +1,13 @@
-﻿using Abstraction.Core;
-using Abstraction.Laserlab;
+﻿using System;
 using System.Collections.Generic;
-using System;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Laserlab.Data.Model
+namespace Laserlab.Model
 {
-  
-    public class User 
+    public class User
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -21,7 +22,7 @@ namespace Laserlab.Data.Model
         // nav
         public ICollection<User> Users { get; set; }
     }
-    public class Project 
+    public class Project
     {
         public ICollection<User> Users { get; set; }
         public string Title { get; set; }
@@ -30,4 +31,3 @@ namespace Laserlab.Data.Model
         public int Id { get; set; }
     }
 }
-//todo
