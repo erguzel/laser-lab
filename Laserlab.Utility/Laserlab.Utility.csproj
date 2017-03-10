@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Abstraction.Core\Abstraction.Core.csproj" />
+    <ProjectReference Include="$(SolutionDir)\Abstraction.Core\Abstraction.Core.csproj" />
   </ItemGroup>
 
 </Project>

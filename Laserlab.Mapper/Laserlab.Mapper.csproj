@@ -44,11 +44,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Laserlab.Data.Model\Laserlab.Data.Model.csproj">
+    <ProjectReference Include="$(SolutionDir)\Laserlab.Data.Model\Laserlab.Data.Model.csproj">
       <Project>{8cdd9f5a-65b8-4b1c-b300-ebc55e2fe238}</Project>
       <Name>Laserlab.Data.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Laserlab.DTO\Laserlab.DTO.csproj">
+    <ProjectReference Include="$(SolutionDir)\Laserlab.DTO\Laserlab.DTO.csproj">
       <Project>{231d4550-0762-4994-bcdc-3cc0a86d1186}</Project>
       <Name>Laserlab.DTO</Name>
     </ProjectReference>

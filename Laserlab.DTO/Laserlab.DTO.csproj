@@ -44,11 +44,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Abstraction.Core\Abstraction.Core.csproj">
+    <ProjectReference Include="$(SolutionDir)\Abstraction.Core\Abstraction.Core.csproj">
       <Project>{2f6978ea-bd03-4e81-bf16-e2df69662de7}</Project>
       <Name>Abstraction.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Abstraction.Laserlab\Abstraction.Laserlab.csproj">
+    <ProjectReference Include="$(SolutionDir)\Abstraction.Laserlab\Abstraction.Laserlab.csproj">
       <Project>{e5894b2a-32b4-467a-8dfc-f717ff1a896a}</Project>
       <Name>Abstraction.Laserlab</Name>
     </ProjectReference>

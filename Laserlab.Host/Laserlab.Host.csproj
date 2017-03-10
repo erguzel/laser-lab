@@ -67,7 +67,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Laserlab.Config\Laserlab.Config.csproj">
+    <ProjectReference Include="$(SolutionDir)\Laserlab.Config\Laserlab.Config.csproj">
       <Project>{0c528663-915b-4991-9c78-eb8823c17229}</Project>
       <Name>Laserlab.Config</Name>
     </ProjectReference>
