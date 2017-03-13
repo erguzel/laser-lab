@@ -44,5 +44,15 @@
     <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abstraction.Core\Abstraction.Core.csproj">
+      <Project>{2f6978ea-bd03-4e81-bf16-e2df69662de7}</Project>
+      <Name>Abstraction.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abstraction.Laserlab\Abstraction.Laserlab.csproj">
+      <Project>{E5894B2A-32B4-467A-8DFC-F717FF1A896A}</Project>
+      <Name>Abstraction.Laserlab</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

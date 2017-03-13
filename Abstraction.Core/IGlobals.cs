@@ -33,19 +33,16 @@ namespace Abstraction.Core
     {
         string Title { get; set; }
     }
-    /// <summary>
-    /// any object that has email property
-    /// </summary>
-    public interface IbeMailable
+    public interface IeMail
     {
-        IEnumerable<string> eMails { get; set; }
+        string eMail { get; set; }
     }
     /// <summary>
     /// Anything that has a phone number property
     /// </summary>
     public interface IbePhonable
     {
-       Int64 PhoneNo { get; set; }
+        Int64 PhoneNo { get; set; }
     }
     /// <summary>
     /// Any object that has status property
@@ -54,7 +51,7 @@ namespace Abstraction.Core
     {
         string status { get; set; }
     }
-	 public interface IChangable : IChronological
+    public interface IChangable : IChronological
     {
         string PreviousState { get; set; }
         string CurrentState { get; set; }
@@ -103,13 +100,6 @@ namespace Abstraction.Core
         string DefaultValue { get; set; }
     }
     /// <summary>
-    /// Anything that can be represented by an id.
-    /// </summary>
-    public interface Ibeidentifiable
-    {
-        int Id { get; set; }
-    }
-    /// <summary>
     /// Anything that needs description.
     /// </summary>
     public interface IbeDescriptable
@@ -121,7 +111,7 @@ namespace Abstraction.Core
     /// </summary>
     public interface ICountable
     {
-        double Quantity { get; set; }
+        double Count { get; set; }
     }
     /// <summary>
     /// Anything that is profitable
@@ -259,12 +249,12 @@ namespace Abstraction.Core
     }
     public interface ITable
     {
-         string Schema { get; set; }
-         string Table { get; set; }
-         string ColumnType { get; set; }
-         string ColumnName { get; set; }
+        string Schema { get; set; }
+        string Table { get; set; }
+        string ColumnType { get; set; }
+        string ColumnName { get; set; }
     }
-    public interface IService<entity> where entity:class
+    public interface IService<entity> where entity : class
     {
         IEnumerable<entity> GetAll();
         IEnumerable<entity> GetBy(Expression<Func<entity, bool>> entityPredicate);
@@ -286,4 +276,68 @@ namespace Abstraction.Core
         string Adress { get; set; }
     }
     public interface Iconfig { }
+    public interface IEnumic : IUniqueIdentifier, IbeNamable
+    {
+
+    }
+    public interface IBornable
+    {
+        DateTime BirthDate { get; set; }
+    }
+    public interface IGenderable
+    {
+        bool IsFemale { get; set; }
+    }
+    public interface IMiddleName
+    {
+        string MiddleName { get; set; }
+    }
+    public interface IUserName
+    {
+        string UserName { get; set; }
+    }
+    public interface IPassword
+    {
+        string PassWord { get; set; }
+    }
+    public interface IYear
+    {
+        int Year { get; set; }
+    }
+    public interface IParagraph
+    {
+        string Content { get; set; }
+    }
+    public interface IRulable
+    {
+        string Ruler { get; set; }
+    }
+    public interface IChemicalFormula
+    {
+        string ChemicalFormula { get; set; }
+    }
+    public interface IPhase
+    {
+        string Phase { get; set; }
+    }
+    public interface IAmount
+    {
+        double Amount_gr { get; set; }
+    }
+    public interface IWavelength
+    {
+        double nm { get; set; }
+    }
+    public interface IWatt
+    {
+        double watt { get; set; }
+    }
+    public interface IBrand
+    {
+        string Brand { get; set; }
+    }
+    public interface ICheckPrimary
+    {
+        bool IsPrimary { get; set; }
+    }
 }

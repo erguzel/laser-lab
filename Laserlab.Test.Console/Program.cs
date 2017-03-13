@@ -14,16 +14,30 @@ namespace Laserlab.Test.Console
         static void Main(string[] args)
         {
 
-            UserType t1 = new UserType() { Id = 1, Name = "Admin" };
-            UserType t2 = new UserType() { Id = 1, Name = "Member" };
-            UserType t3 = new UserType() { Id = 1, Name = "Guest" };
-            List<UserType> userTypes = new List<UserType>();
-            userTypes.Add(t1);
-            userTypes.Add(t2);
-            userTypes.Add(t3);
-            Laserlab.Service.LaserlabService<UserType> userService = new Service.LaserlabService<UserType>();
-            
-            userService.InsertRange((IEnumerable<UserType>)userTypes);
+            PersonType p1 = new PersonType()
+            {
+                Name = "Admin"
+
+            };
+            PersonType p2 = new PersonType()
+            {
+                Name = "User"
+
+            };
+            PersonType p3 = new PersonType()
+            {
+                Name = "Visitor"
+
+            };
+            List<PersonType> ps = new List<PersonType>();
+            ps.Add(p1);
+            ps.Add(p2);
+            ps.Add(p2);
+            using (Laserlab.Service.LaserlabService<PersonType> _pt = new Service.LaserlabService<PersonType>())
+            {
+                _pt.InsertRange(ps);
+            }
+
         }
     }
 }

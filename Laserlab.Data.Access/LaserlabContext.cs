@@ -19,17 +19,32 @@ namespace Laserlab.Data.Access
         {
             //this.Database.Delete();
             _modelBuilder = new DbModelBuilder();
-            OnModelCreating(_modelBuilder);
+            //OnModelCreating(_modelBuilder);
             
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new UserTypeConfig());
+            //modelBuilder.Configurations.Add(new UserTypeConfig());
             base.OnModelCreating(modelBuilder);
         }
-        public DbSet<User> Users { get; set; }
-        public DbSet<UserType> UserTypes { get; set; }
-        public DbSet<Project> Project { get; set; }
+        public  DbSet<Person> Person { get; set; }
+        public  DbSet<PersonType> PersonTypes { get; set; }
+        public  DbSet<Authorization> Authorizations { get; set; }
+        public  DbSet<User> Users { get; set; }
+        public  DbSet<ExtensionType> ExtensionTypes { get; set; }
+        public  DbSet<Document> Documents { get; set; }
+        public  DbSet<DocumentType> DocumentTypes { get; set; }
+        public DbSet<Publication> Publications { get; set; }
+        public DbSet<Topic> Topics { get; set; }
+        public DbSet<Facility> Facilitys { get; set; }
+        public DbSet<EquipmentType> EquipmentTypes { get; set; }
+        public DbSet<Equipment> Equipments { get; set; }
+        public DbSet<Equipment> ChemicalTypes { get; set; }
+        public DbSet<Equipment> Chemicals { get; set; }
+        public DbSet<Email> Emails { get; set; }
+        public DbSet<Phone> Phones { get; set; }
+
+
     }
     //protected override void OnModelCreating(DbModelBuilder modelBuilder)
     //{
