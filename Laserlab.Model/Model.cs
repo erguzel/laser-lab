@@ -83,6 +83,7 @@ namespace Laserlab.Model
         public ICollection<Person> Persons { get; set; }
         public ICollection<DocumentType> DocumentTypes { get; set; }
         public ICollection<Topic> Topics { get; set; }
+        public ICollection<Equipment> Equipments { get; set; }
         public ExtensionType Extension { get; set; }
         //
         public int Id { get; set; }
@@ -190,12 +191,13 @@ namespace Laserlab.Model
         public bool IsPrimary { get; set; }
         #endregion
     }
-    public class Phone:IPhone
+    public class Phone:IPhone, IUniqueIdentifier
     {
         #region nav
         public  ICollection<Person> Persons { get; set; }
         //
         public long PhoneNo { get; set; }
+        public int Id { get; set; }
         #endregion
     }
 }

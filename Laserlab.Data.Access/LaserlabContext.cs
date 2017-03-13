@@ -39,8 +39,8 @@ namespace Laserlab.Data.Access
         public DbSet<Facility> Facilitys { get; set; }
         public DbSet<EquipmentType> EquipmentTypes { get; set; }
         public DbSet<Equipment> Equipments { get; set; }
-        public DbSet<Equipment> ChemicalTypes { get; set; }
-        public DbSet<Equipment> Chemicals { get; set; }
+        public DbSet<ChemicalType> ChemicalTypes { get; set; }
+        public DbSet<Chemical> Chemicals { get; set; }
         public DbSet<Email> Emails { get; set; }
         public DbSet<Phone> Phones { get; set; }
 
