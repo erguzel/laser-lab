@@ -11,5 +11,13 @@ using Abstraction.Laserlab;
 /// </summary>
 namespace Laserlab.DTO // todo
 {
-
+    public class EquipmentDTO : IEquipment
+    {
+        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ModelCode { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public double Count { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime TheDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    }
 }
